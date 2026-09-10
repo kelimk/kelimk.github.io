@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUTUBE最新版本首页-官方下载与功能更新指南</title>
+    <meta name="description" content="LUTUBE最新版本首页，提供官方最新版下载信息、新功能解析、安装使用教程及常见问题解答，帮助用户快速了解并安全升级到LUTUBE最新版本。">
+    <meta name="keywords" content="LUTUBE, LUTUBE最新版本, LUTUBE下载, LUTUBE更新, LUTUBE官网, 视频客户端">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f7fa;
+            color: #1a2a3a;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #2b6ef3;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #1e6ef4, #3b9eff);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            font-size: 18px;
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0b1c33;
+            letter-spacing: 0.5px;
+        }
+        .logo-text span {
+            color: #1e6ef4;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav a {
+            color: #33475b;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #1e6ef4;
+            border-bottom-color: #1e6ef4;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-primary {
+            background: #1e6ef4;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #1558d0;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1a2a3a;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(145deg, #eef4fe 0%, #ffffff 60%, #e2edff 100%);
+            padding: 50px 0 40px;
+            border-bottom: 1px solid #e6ecf5;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            flex: 1 1 480px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #ff6b3d;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .hero-content h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #0b1c33;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+        .hero-content h1 span {
+            color: #1e6ef4;
+        }
+        .hero-desc {
+            font-size: 1.05rem;
+            color: #4a6078;
+            margin-bottom: 24px;
+            max-width: 560px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-download {
+            background: #1e6ef4;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(30, 110, 244, 0.35);
+            transition: 0.2s;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 110, 244, 0.45);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #1e6ef4;
+            border: 2px solid #1e6ef4;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .btn-ghost:hover {
+            background: #eaf1ff;
+        }
+        .hero-visual {
+            flex: 1 1 320px;
+            min-width: 280px;
+        }
+        .version-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9f0fa;
+        }
+        .version-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .version-label {
+            background: #e8f0fe;
+            color: #1e6ef4;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .version-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0b1c33;
+        }
+        .version-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+        .version-meta span {
+            font-size: 0.9rem;
+            color: #5f7890;
+        }
+        .progress-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .progress-item .check {
+            background: #28c081;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        .progress-item .cross {
+            background: #f2f2f2;
+            color: #aaa;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b1c33;
+            margin-bottom: 8px;
+        }
+        .section-title p {
+            color: #6b8299;
+            font-size: 1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px 24px;
+            border: 1px solid #edf1f7;
+            transition: 0.25s;
+            text-align: center;
+        }
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transform: translateY(-4px);
+        }
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: #1a2e44;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #617b92;
+            line-height: 1.6;
+        }
+
+        /* Update Log */
+        .update-section {
+            background: #fff;
+            padding: 45px 0;
+            border-top: 1px solid #eef2f7;
+            border-bottom: 1px solid #eef2f7;
+        }
+        .update-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .update-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px dashed #e4eaf0;
+        }
+        .update-item:last-child {
+            border-bottom: none;
+        }
+        .update-version {
+            background: #f0f6ff;
+            border-radius: 10px;
+            padding: 8px 16px;
+            font-weight: 700;
+            color: #1e6ef4;
+            white-space: nowrap;
+            height: fit-content;
+            font-size: 0.9rem;
+        }
+        .update-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #1a2e44;
+        }
+        .update-content p {
+            font-size: 0.9rem;
+            color: #5e768d;
+        }
+
+        /* Download Section */
+        .download-section {
+            padding: 50px 0;
+        }
+        .download-wrapper {
+            background: linear-gradient(135deg, #0b1f3a, #1e3a5f);
+            border-radius: 20px;
+            padding: 45px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .download-info {
+            color: #fff;
+            max-width: 500px;
+        }
+        .download-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .download-info p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-bottom: 18px;
+        }
+        .download-options {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background: #fff;
+            color: #0b1f3a;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .download-btn.alt {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .download-note {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 45px 0 60px;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .guide-step {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid #edf1f7;
+        }
+        .step-number {
+            background: #1e6ef4;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .guide-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1a2e44;
+        }
+        .guide-step p {
+            font-size: 0.9rem;
+            color: #607a92;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #f9fbfd;
+            padding: 50px 0;
+        }
+        .faq-wrap {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            border: 1px solid #eef2f7;
+        }
+        .faq-q {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #1a2e44;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-q::before {
+            content: "Q";
+            background: #1e6ef4;
+            color: #fff;
+            font-size: 0.8rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-a {
+            font-size: 0.9rem;
+            color: #4f6880;
+            padding-left: 30px;
+        }
+        .faq-a::before {
+            content: "A";
+            background: #28c081;
+            color: #fff;
+            font-size: 0.8rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #0d1b2c;
+            color: #8fa8c0;
+            padding: 40px 0 20px;
+            font-size: 0.85rem;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .footer-col h4 {
+            color: #e6edf5;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #8fa8c0;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #1d3044;
+            padding-top: 18px;
+            text-align: center;
+            color: #7890a6;
+        }
+        .footer-bottom a {
+            color: #3b9eff;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .update-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                border-radius: 0 0 12px 12px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .main-nav.show {
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .header-actions .btn-primary {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .download-wrapper {
+                padding: 30px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero-inner {
+                flex-direction: column;
+            }
+            .header-inner {
+                padding: 10px 0;
+            }
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+            .btn-ghost {
+                width: 100%;
+                text-align: center;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">L</div>
+                <div class="logo-text">LUTUBE<span>最新版</span></div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">功能特性</a></li>
+                    <li><a href="#update">更新日志</a></li>
+                    <li><a href="#download">下载</a></li>
+                    <li><a href="#guide">安装指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#download" class="btn-primary">立即下载</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">🔥 最新版已发布</div>
+                <h1>LUTUBE <span>最新版本</span> 全面体验</h1>
+                <p class="hero-desc">LUTUBE 最新版带来了更流畅的播放体验、全新界面设计与多项实用功能升级。无论你是老用户还是新朋友，这里将为你提供最完整的下载指引与功能介绍。</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-download">⬇ 下载最新版</a>
+                    <a href="#features" class="btn-ghost">了解新功能</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="version-card">
+                    <div class="version-top">
+                        <span class="version-label">当前最新</span>
+                        <span class="version-number">v6.8.2</span>
+                    </div>
+                    <div class="version-meta">
+                        <span>📅 更新日期：近期发布</span>
+                        <span>📦 大小：约 48 MB</span>
+                        <span>🖥 支持：Windows / macOS / Android / iOS</span>
+                    </div>
+                    <div class="progress-list">
+                        <div class="progress-item"><span class="check">✓</span> 新增高清倍速播放增强</div>
+                        <div class="progress-item"><span class="check">✓</span> 修复若干已知问题</div>
+                        <div class="progress-item"><span class="check">✓</span> 优化启动速度与稳定性</div>
+                        <div class="progress-item"><span class="cross">✗</span> 旧版本将不再维护</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="feature-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>LUTUBE 最新版核心功能</h2>
+                <p>每一次更新，都为了更好的观看体验</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>极速播放引擎</h3>
+                    <p>全新播放内核，加载速度提升明显，拖动进度条几乎无延迟，4K 视频也能流畅播放。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>全新界面设计</h3>
+                    <p>更现代、更简洁的界面布局，深色模式全面适配，视觉体验更加舒适。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📡</span>
+                    <h3>智能推荐算法</h3>
+                    <p>基于观看习惯的个性化推荐，帮你发现更多感兴趣的内容，减少寻找时间。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>隐私保护升级</h3>
+                    <p>加强本地数据加密，观看记录与搜索历史更安全，支持无痕模式。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📥</span>
+                    <h3>离线缓存优化</h3>
+                    <p>缓存管理更智能，支持多任务下载与断点续传，离线观看更省心。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎮</span>
+                    <h3>多端无缝同步</h3>
+                    <p>手机、平板、电脑之间观看进度与收藏实时同步，切换设备不中断。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Log -->
+    <section class="update-section" id="update">
+        <div class="container">
+            <div class="section-title">
+                <h2>版本更新记录</h2>
+                <p>从 v6.7 到 v6.8，LUTUBE 一直在进步</p>
+            </div>
+            <div class="update-grid">
+                <div class="update-item">
+                    <div class="update-version">v6.8.2</div>
+                    <div class="update-content">
+                        <h4>稳定性与安全修复</h4>
+                        <p>修复了部分设备上播放偶发卡顿的问题；优化了网络切换时的连接恢复机制；安全补丁更新。</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <div class="update-version">v6.8.0</div>
+                    <div class="update-content">
+                        <h4>新增画中画与倍速记忆</h4>
+                        <p>支持画中画模式，可边看边操作其他应用；播放倍速设置将被自动记忆，下次播放自动沿用。</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <div class="update-version">v6.7.5</div>
+                    <div class="update-content">
+                        <h4>界面细节优化</h4>
+                        <p>调整了侧边栏交互逻辑，优化了深色模式下的对比度显示，修复部分文案错误。</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <div class="update-version">v6.7.0</div>
+                    <div class="update-content">
+                        <h4>推荐流升级</h4>
+                        <p>推荐算法模型更新，内容匹配度更高；新增“不感兴趣”反馈按钮，推荐内容更精准。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-wrapper">
+                <div class="download-info">
+                    <h2>下载 LUTUBE 最新版</h2>
+                    <p>选择适合你的平台版本，开始享受全新的视频体验。所有版本均为官方发布，请放心下载。</p>
+                    <div class="download-options">
+                        <a href="#" class="download-btn">🪟 Windows 版</a>
+                        <a href="#" class="download-btn">🍎 macOS 版</a>
+                        <a href="#" class="download-btn alt">📱 Android 版</a>
+                        <a href="#" class="download-btn alt">📱 iOS 版</a>
+                    </div>
+                    <div class="download-note">* 下载前请确认系统满足最低配置要求。iOS 版可在 App Store 搜索“LUTUBE”获取。</div>
+                </div>
+                <div class="download-info" style="max-width: 280px; text-align: center;">
+                    <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; margin-top: 10px;">
+                        <div style="font-size: 2.5rem; margin-bottom: 8px;">📦</div>
+                        <div style="font-weight: 600; margin-bottom: 6px;">版本 v6.8.2</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">SHA256 校验码下载后可见</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide -->
+    <section class="guide-section" id="guide">
+        <div class="container">
+            <div class="section-title">
+                <h2>安装使用指南</h2>
+                <p>从下载到使用，三步轻松搞定</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <h3>下载对应版本</h3>
+                    <p>根据你的设备系统，点击上方对应的下载按钮。Windows 用户请选择 x64 或 ARM 版本，Mac 用户注意区分 Intel 与 Apple Silicon 芯片。</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <h3>安装与权限设置</h3>
+                    <p>Windows 用户运行安装包后按提示完成安装；macOS 用户若提示“无法打开”，请前往系统设置-隐私与安全性中允许来自 App Store 和被认可的开发者的应用。</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <h3>登录与个性化设置</h3>
+                    <p>首次打开后可选择游客模式或注册账号。建议登录账号以同步观看记录和收藏。在设置中可调整播放画质、缓存路径、深色模式等选项。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于 LUTUBE 最新版，你可能想了解这些</p>
+            </div>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <div class="faq-q">更新到最新版后，我的历史记录和收藏会丢失吗？</div>
+                    <div class="faq-a">不会丢失。LUTUBE 在升级过程中会自动保留本地数据。若你登录了账号，数据还会同步到云端，即使更换设备也能恢复。为防止意外，建议更新前确保账号已登录。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">LUTUBE 最新版对电脑配置有什么要求？</div>
+                    <div class="faq-a">Windows 10/11 及以上系统，4GB 以上内存，推荐配备独立显卡以获得更流畅的高清播放体验。macOS 版本要求 11.0 及以上。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">旧版本还能继续使用吗？</div>
+                    <div class="faq-a">可以继续使用，但旧版本将不再获得功能更新与安全补丁。部分在线服务可能会逐步停止对旧版本的支持，建议尽快升级到最新版。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何反馈使用中遇到的问题？</div>
+                    <div class="faq-a">你可以通过应用内“帮助与反馈”入口提交问题，或访问官方网站的社区板块进行反馈。提交时请附上系统版本号与问题截图，有助于我们更快定位问题。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">LUTUBE 最新版支持哪些视频格式？</div>
+                    <div class="faq-a">支持主流格式如 MP4、MKV、WebM、AVI 等，同时支持在线流媒体播放。对于特殊编码格式，建议安装对应的解码器插件。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <ul>
+                        <li><a href="#">最新版本下载</a></li>
+                        <li><a href="#">历史版本</a></li>
+                        <li><a href="#">功能预览</a></li>
+                        <li><a href="#">更新日志</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">安装指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>开发者</h4>
+                    <ul>
+                        <li><a href="#">API 文档</a></li>
+                        <li><a href="#">开放平台</a></li>
+                        <li><a href="#">社区反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 LUTUBE 最新版首页 · 本页面仅为产品信息展示与下载引导 · 请支持正版软件</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单移动端菜单切换
+        const toggleBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('mainNav');
+        toggleBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+        });
+        // 点击导航链接后自动关闭菜单
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+  </html>
