@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栖凤楼-古风雅集与中式人文生活指南</title>
+    <meta name="description" content="栖凤楼，一个专注于古风文化、中式雅集与东方生活美学的线上空间。探索传统技艺、文人雅事、空间营造与当代东方生活方式。">
+    <meta name="keywords" content="栖凤楼,古风,雅集,中式生活,传统文化,东方美学,汉服,茶道,香道,非遗">
+    <style>
+        :root {
+            --primary: #8c2f39;
+            --primary-dark: #6f1d26;
+            --accent: #c19a6b;
+            --accent-light: #e8d5b7;
+            --ink: #2d2a26;
+            --ink-light: #5c554c;
+            --paper: #faf7f2;
+            --paper-dark: #f0e9de;
+            --white: #ffffff;
+            --border: #ddd6c8;
+            --shadow: 0 10px 30px -12px rgba(45, 42, 38, 0.15);
+            --radius: 12px;
+            --font-serif: "Noto Serif SC", "Songti SC", "SimSun", "STSong", serif;
+            --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== Header & Nav ===== */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo .seal {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 6px;
+            text-align: center;
+            line-height: 36px;
+            font-size: 18px;
+            font-family: var(--font-serif);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            font-size: 16px;
+            color: var(--ink);
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--ink);
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, #f5eee4 0%, #eaded0 100%);
+            padding: 64px 0 56px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(193,154,107,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            letter-spacing: 2px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            color: var(--ink-light);
+            margin-bottom: 28px;
+            max-width: 520px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(140,47,57,0.25);
+        }
+
+        .btn-outline {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .hero-image {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .hero-image .art-placeholder {
+            background: linear-gradient(145deg, var(--accent-light), var(--accent));
+            border-radius: 8px;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 64px;
+            font-family: var(--font-serif);
+            margin-bottom: 16px;
+            letter-spacing: 12px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero-image .caption {
+            font-size: 14px;
+            color: var(--ink-light);
+        }
+
+        /* ===== Section ===== */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-alt {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--ink-light);
+            font-size: 16px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ===== Cards ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px -12px rgba(45,42,38,0.18);
+        }
+
+        .card-image {
+            height: 180px;
+            background: var(--paper-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-body h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .card-body p {
+            color: var(--ink-light);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .card-link {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== Feature split ===== */
+        .feature-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .feature-text p {
+            margin-bottom: 16px;
+            color: var(--ink-light);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--ink);
+        }
+
+        .feature-list li::before {
+            content: "❋";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 18px;
+        }
+
+        .feature-visual {
+            background: var(--accent-light);
+            border-radius: var(--radius);
+            padding: 36px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border);
+        }
+
+        .feature-visual .quote {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--primary-dark);
+            line-height: 2;
+            font-style: italic;
+            max-width: 320px;
+        }
+
+        .feature-visual .quote-author {
+            margin-top: 16px;
+            color: var(--ink-light);
+            font-size: 14px;
+        }
+
+        /* ===== Gallery ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item .g-image {
+            height: 140px;
+            background: var(--paper-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gallery-item .g-caption {
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--ink);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* ===== Timeline ===== */
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+            opacity: 0.4;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--paper);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-item h3 {
+            font-size: 20px;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+
+        .timeline-item .time {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .timeline-item p {
+            color: var(--ink-light);
+            font-size: 15px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            transition: background 0.2s ease;
+            font-family: var(--font-serif);
+            color: var(--ink);
+        }
+
+        .faq-question:hover {
+            background: var(--paper);
+        }
+
+        .faq-question .icon {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--ink-light);
+            font-size: 15px;
+            background: var(--paper);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 24px 20px;
+            max-height: 300px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 64px 24px;
+            border-radius: 0;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 28px;
+            font-size: 17px;
+        }
+
+        .cta-section .btn {
+            background: var(--white);
+            color: var(--primary);
+            border: none;
+        }
+
+        .cta-section .btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.7);
+            padding: 48px 0 24px;
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col a {
+            display: block;
+            padding: 4px 0;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 992px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-split {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 16px 24px;
+                gap: 16px;
+                box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            }
+
+            .main-nav.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 48px 0;
+            }
+
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .timeline {
+                padding-left: 24px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-text h1 {
+                font-size: 26px;
+                letter-spacing: 1px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-visual {
+                padding: 24px;
+            }
+
+            .feature-visual .quote {
+                font-size: 16px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span class="seal">栖</span>
+                栖凤楼
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="#about">关于栖凤</a>
+                <a href="#arts">风雅之事</a>
+                <a href="#gallery">雅集图鉴</a>
+                <a href="#timeline">栖凤年记</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>栖凤楼 · 东方人文雅集之所</h1>
+                    <p>栖凤楼，取“凤栖梧桐”之意，是一处汇集古风美学、传统技艺与当代中式生活方式的线上文化空间。在这里，我们寻访文人雅事，探讨器物与空间之美，让古典精神在日常中安然栖息。</p>
+                    <div class="hero-actions">
+                        <a href="#arts" class="btn btn-primary">探索风雅</a>
+                        <a href="#about" class="btn btn-outline">了解我们</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="art-placeholder">栖凤</div>
+                    <div class="caption">凤栖梧桐 · 雅韵天成</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于栖凤 -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>何谓栖凤楼</h2>
+                    <p>一处精神栖息地，探寻东方美学的当代回响</p>
+                </div>
+                <div class="feature-split">
+                    <div class="feature-text">
+                        <h2>于喧嚣中，寻一处静雅</h2>
+                        <p>“栖凤楼”之名，源自中国古典意象中凤凰择木而栖的传说。凤凰非梧桐不栖，非醴泉不饮，象征着高洁的志趣与对理想环境的追求。我们以此自勉，期望构建一个如梧桐般值得停驻的线上空间。</p>
+                        <p>这里不追逐喧哗的潮流，而是沉心于那些经得起时间打磨的事物：一盏茶的余温、一炉香的氤氲、一袭衣袂的飘逸、一方庭院的光影。我们相信，真正的东方美学，藏在日常的细微之处。</p>
+                        <ul class="feature-list">
+                            <li>解读古典生活美学，分享当代中式生活方式</li>
+                            <li>专注传统技艺传承，走近匠人与手作温度</li>
+                            <li>营造线上雅集社区，连接同好之人</li>
+                            <li>甄选人文好物，让美物进入日常</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="quote">“始知真隐者，不必在山林。”<br>—— 白居易</div>
+                        <div class="quote-author">于城市之中，亦可得栖凤之趣</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 风雅之事 -->
+        <section class="section section-alt" id="arts">
+            <div class="container">
+                <div class="section-header">
+                    <h2>风雅之事</h2>
+                    <p>琴棋书画、诗酒花茶，皆是通往内心的路径</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">🍵</div>
+                        <div class="card-body">
+                            <h3>茶事 · 一瓯清趣</h3>
+                            <p>从一片树叶的旅程，到一席茶事的仪轨。了解六大茶类的基础知识、冲泡心得与品茗之乐，于茶汤中照见自己。</p>
+                            <a href="#" class="card-link">浏览茶事专题 →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">🏮</div>
+                        <div class="card-body">
+                            <h3>香事 · 暗香浮动</h3>
+                            <p>香之为用，自上古而始。认识沉香、檀香等香材，学习篆香、隔火熏香之法，在一缕青烟中安顿心神。</p>
+                            <a href="#" class="card-link">了解香事文化 →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">🪷</div>
+                        <div class="card-body">
+                            <h3>衣冠 · 华裳之美</h3>
+                            <p>衣冠上国，礼仪之邦。从形制到纹样，从历史脉络到现代穿搭，探索汉服及传统服饰的审美与日常可行性。</p>
+                            <a href="#" class="card-link">走进衣冠世界 →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">🏡</div>
+                        <div class="card-body">
+                            <h3>居室 · 空间营造</h3>
+                            <p>一几一榻，一器一物。探讨中式空间的留白、借景与虚实之道，打造具有东方气韵的现代居所。</p>
+                            <a href="#" class="card-link">探访空间美学 →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">📜</div>
+                        <div class="card-body">
+                            <h3>文房 · 笔墨之间</h3>
+                            <p>笔墨纸砚，文人案头的良伴。重新发现书写的意义，从习字、绘画到文房清供，感受笔尖的宁静力量。</p>
+                            <a href="#" class="card-link">研习文房之乐 →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">🌿</div>
+                        <div class="card-body">
+                            <h3>岁时 · 节令生活</h3>
+                            <p>春有百花秋有月。顺应二十四节气的节奏，重拾传统节日的仪式感，让生活与自然同频呼吸。</p>
+                            <a href="#" class="card-link">查看岁时记 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 雅集图鉴 -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2>雅集图鉴</h2>
+                    <p>一瞥栖凤楼中的光影与风物</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="g-image">🏯</div>
+                        <div class="g-caption">临水轩窗</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🍂</div>
+                        <div class="g-caption">一叶知秋</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🏺</div>
+                        <div class="g-caption">案头清供</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🌸</div>
+                        <div class="g-caption">四时花事</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🪕</div>
+                        <div class="g-caption">弦音袅袅</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">✒️</div>
+                        <div class="g-caption">翰墨余香</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🍃</div>
+                        <div class="g-caption">庭院深深</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="g-image">🕯️</div>
+                        <div class="g-caption">烛影摇红</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 栖凤年记 -->
+        <section class="section section-alt" id="timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h2>栖凤年记</h2>
+                    <p>记录我们与同好共同走过的时光</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">春 · 始创</span>
+                        <h3>缘起 · 筑巢引凤</h3>
+                        <p>源于几位友人对传统美学的共同热爱，栖凤楼于春日萌芽。最初只是分享茶席与旧书的私人雅集，后来逐渐汇聚了更多同路之人。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">夏 · 深耕</span>
+                        <h3>探索 · 风雅之道</h3>
+                        <p>我们开始系统地梳理香事、茶事与空间美学的内容，开设线上雅集与交流活动，与众多爱好者一同研习，并寻访各地匠人与手作工坊。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">秋 · 收获</span>
+                        <h3>结社 · 同气相求</h3>
+                        <p>线上社区初具规模，越来越多的朋友在这里分享自己的茶席布置、插花心得与汉服穿搭。栖凤楼成为一方精神栖息的小小天地。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">冬 · 沉淀</span>
+                        <h3>展望 · 温故知新</h3>
+                        <p>我们放慢脚步，回望初衷。未来将继续深耕内容，策划更多有深度的专题与体验，让东方生活美学之美，真正润泽日常。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>关于栖凤楼，或许你想了解这些</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">栖凤楼是一个什么样的网站？<span class="icon">+</span></div>
+                        <div class="faq-answer">栖凤楼是一个以东方古典美学与当代中式生活方式为主题的线上内容社区。我们通过图文专题、雅集活动等形式，分享茶香衣饰、空间营造、岁时节令等传统文化在现代生活中的应用与乐趣。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">内容是否只适合“古风”爱好者？<span class="icon">+</span></div>
+                        <div class="faq-answer">并非如此。虽然我们根植于传统文化，但更关注其与现代生活的融合。无论你是对茶道感兴趣的新手，还是想了解新中式家居风格，或是单纯欣赏器物之美，都能在这里找到共鸣。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何参与栖凤楼的线上雅集？<span class="icon">+</span></div>
+                        <div class="faq-answer">我们会在网站及社区内不定期发布雅集活动预告，形式包括线上读书会、主题茶会分享、手作体验直播等。你可以通过站内公告或关注我们获取最新活动信息，参与方式通常会在活动详情中说明。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否提供商品购买或匠人合作？<span class="icon">+</span></div>
+                        <div class="faq-answer">栖凤楼目前以内容分享为主，但会不定期与独立匠人合作推出联名好物或组织线下市集。相关合作信息会在网站显著位置进行公示，欢迎志同道合的创作者与我们联系。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>愿与君同坐，共赏四时风雅</h2>
+                <p>加入栖凤楼，成为我们的同路人。</p>
+                <a href="#" class="btn">即刻启程</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo"><span class="seal">栖</span>栖凤楼</div>
+                    <p>于尘世中筑一方雅境，共寻东方生活之美。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <a href="#about">关于栖凤</a>
+                    <a href="#arts">风雅之事</a>
+                    <a href="#gallery">雅集图鉴</a>
+                    <a href="#timeline">栖凤年记</a>
+                </div>
+                <div class="footer-col">
+                    <h4>连接</h4>
+                    <a href="#faq">常见问题</a>
+                    <a href="#">联系合作</a>
+                    <a href="#">加入我们</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 栖凤楼 · 本页面为概念展示 · 所有内容均为示例</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠
+        document.querySelectorAll('.faq-question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                var item = this.parentElement;
+                var isActive = item.classList.contains('active');
+                // 关闭其他
+                document.querySelectorAll('.faq-item').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 移动端导航
+        var navToggle = document.getElementById('navToggle');
+        var mainNav = document.getElementById('mainNav');
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+  </html>
